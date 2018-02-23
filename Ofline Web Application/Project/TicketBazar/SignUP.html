@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            font-family:Cambria;
+            font-size: 22px;
+            width:960px;
+            margin:auto;
+        }
+
+        #container {
+            width: 600px;
+            margin: 20px auto;
+            background-color:maroon;
+            padding:5px 20px 20px 20px;
+            border-radius:5px;
+            color:whitesmoke;
+        }
+
+        #row {
+            display: inline-block;
+            width: 500px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        select {
+            display: inline-block;
+            width: 173px;
+            color:maroon;
+
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        .error {
+            color:white;
+            display: block;
+            margin-left: 160px;
+            font-size: medium;
+            font-weight: bold;
+        }
+       #button{
+            color:maroon;
+        }
+    </style>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        function validate() {
+            var isValid = true;
+            if ($("#fname").val().length == 0) {
+                $("#fname").next(".error").html("First Name is required").show();
+                isValid = false;
+            }
+            if ($("#lname").val().length == 0) {
+                $("#lname").next(".error").html("Last Name is required").show();
+                isValid = false;
+            }
+            if ($("#email").val().length == 0) {
+                $("#email").next(".error").html("Email is required").show();
+                isValid = false;
+            }
+            if ($("#phone").val().length == 0) {
+                $("#phone").next(".error").html("Phone is required").show();
+                isValid = false;
+            }
+            if ($("#gender").val().length == 0) {
+                $("#gender").next(".error").html("Gender is required").show();
+                isValid = false;
+            }
+            if ($("#country").val().length == 0) {
+                $("#country").next(".error").html("country is required").show();
+                isValid = false;
+            }
+            return isValid;
+        }
+        ////Add Data in web SQL
+        //var contacts = {};
+        //contacts.db = null;
+        //contacts.openDb = function () {
+        //    contacts.db = openDatabase("contactsDB", "1.0", "MyContacts Book", 2 * 1024 * 1024);
+        //}
+
+        //contacts.createTable = function () {
+        //    contacts.db.transaction(function (tx) {
+        //        var sql = "CREATE TABLE IF NOT EXISTS contacts(" +
+        //            "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
+        //            "first_name TEXT," +
+        //            "last_name TEXT," +
+        //            "gender TEXT," +
+        //            "country TEXT," +
+        //            "email TEXT," +
+        //            "phone TEXT)";
+        //        tx.executeSql(sql);
+        //    })
+        //}
+
+
+        //contacts.addData = function (name, email, phone) {
+        //    contacts.db.transaction(function (tx) {
+        //        tx.executeSql("INSERT INTO contacts(first_name,last_name,gender,country,phone,email) VALUES(?,?,?,?,?,?)", [first_name, last_name, gender, email, phone]);
+        //    })
+        //}
+
+        //$(document).ready(function () {
+        //    contacts.openDb();
+        //    contacts.createTable();
+        //    $("#Submit").click(function () {
+        //        contacts.addData($("#fname").val(), $("#lname").val(), $("#gender").val(), $("#country").val(), $("#email").val(), $("#phone").val());
+        //        contacts.showContacts();
+        //        $("#fname").val("");
+        //        $("#lname").val("");
+        //        $("#gender").val("");
+        //        $("#country").val("");
+        //        $("#email").val("");
+        //        $("#phone").val("");
+        //        $("#fname").focus();
+        //    })
+
+        //})
+    </script>
+
+</head>
+<body>
+        <div id="container">
+            <form name="formValidation" id="formValidation" onsubmit="return validate()">
+                <h2>Sign Up Form</h2>
+                <p>Mark * is required</p>
+                <fieldset>
+                    <legend>Information</legend>
+                    <div id="row" style="margin-top:7px">
+                        <label for="fname">First Name:*</label>
+                        <input type="text" id="fname" name="fname" />
+                        <span class="error"></span>
+                    </div>
+                    <div id="row" style="margin-top:7px">
+                        <label for="lname">Last Name:*</label>
+                        <input type="text" id="lname" name="lname" />
+                        <span class="error"></span>
+                    </div>
+                    <div id="row" style="margin-top:7px">
+                        <label for="gender">Gender:*</label>
+                        <input type="text" id="gender" name="gender" />
+                        <span class="error"></span>
+                    </div>
+                    <div id="row" style="margin-top:7px">
+                        <label for="country">Country:</label>
+                        <select name="country" id="country" >
+                            <option>Select Country</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="India">India</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="India">Pakistan</option>
+                            <option value="Nepal">USA</option>
+                            <option value="India">UK</option>
+                            <option value="Nepal">Australia</option>
+                        </select>
+                        <span class="error"></span>
+                    </div>
+                    <div id="row" style="margin-top:7px">
+                        <label for="email">Email:*</label>
+                        <input type="email" id="email" name="email" />
+                        <span class="error"></span>
+                    </div>
+                    <div id="row" style="margin-top:7px">
+                        <label for="phone">Phone:*</label>
+                        <input type="text" id="phone" name="phone" />
+                        <span class="error"></span>
+                    </div>
+                    <div style="text-align:right;margin-top:10px">
+                        <input type="reset" value="Refresh" id="button"/>
+                        <input type="submit" value="Submit" id="button" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

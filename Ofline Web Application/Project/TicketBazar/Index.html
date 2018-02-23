@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Air Ticket Bazar</title>
+    <link rel="icon" type="image/png" href="Images/Icon.jpg">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        body {
+            margin: auto;
+            width: auto;
+        }
+
+        #main {
+            background-color: maroon;
+        }
+
+        h1 {
+            font-family: 'Buxton Sketch';
+            color: maroon;
+            padding-left: 30px;
+            font-size: 100px;
+            text-align: left;
+        }
+
+        #forLog {
+            font-size: 20px;
+            margin-top: 10px;
+            color: red;
+            padding-left: 20px;
+            font-family: Cambria;
+        }
+
+        #welcome {
+            text-align: center;
+            font-family: 'Buxton Sketch';
+            font-size: 30px;
+            color: whitesmoke;
+        }
+
+        li {
+            color: maroon;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .modal-footer {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: Cambria;
+        }
+
+        #deBy {
+            margin-top: 10px;
+            font-weight: bold;
+            font-family: 'Buxton Sketch';
+            color: maroon;
+            font-size: 20px;
+        }
+
+        #slideshow {
+            margin: 50px auto;
+            position: relative;
+            width: 100%;
+            height: 540px;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+            #slideshow > div {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            img{
+                height:520px;
+                width:1240px;
+            }
+          
+    </style>
+    <script type="text/javascript">
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#slideshow > div:first')
+              .fadeOut(1000)
+              .next()
+              .fadeIn(1000)
+              .end()
+              .appendTo('#slideshow');
+        }, 3000);
+    </script>
+</head>
+<body>
+    <div id="main">
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="Images/Logo.png" style="height:150px; width:auto; border-radius:50%" />
+                </div>
+                <div class="col-md-8">
+                    <h1>Air Ticket Bazar</h1>
+                </div>
+                <div class="col-md-2">
+                    <p id="deBy">
+                        Developed by:<br />
+                        A.K.M. Rafiqul Alam<br />
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p id="forLog">For booking ticket or know more, Please login..</p>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="SignUP.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p id="welcome">Enjoy your journey with Our Service Partners</p>
+        <div id="slideshow">
+            <div>
+                <img src="SliderImage/United_Airlines.jpg" />
+            </div>
+            <div>
+                <img src="SliderImage/novoair.jpg" />
+            </div>
+            <div>
+                <img src="SliderImage/regent-airways.jpg" />
+            </div>
+            <div>
+                <img src="SliderImage/sky.jpg" />
+            </div>
+            <div>
+                <img src="SliderImage/Us-Bangla.jpg" />
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p>&copy;AirTicketBazar-2017 | AllRightsReserved.</p>
+        </div>
+    </div>
+</body>
+</html>

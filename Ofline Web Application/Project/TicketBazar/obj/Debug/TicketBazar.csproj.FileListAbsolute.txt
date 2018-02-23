@@ -1,0 +1,6 @@
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll.config
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.pdb
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.dll
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.pdb
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.csprojResolveAssemblyReference.cache

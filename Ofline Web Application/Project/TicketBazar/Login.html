@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        body{
+            width:960px;
+            margin:5px auto;
+        }
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 10px 20px 20px 20px;
+            background-color:maroon;
+            border-radius: 10px;
+            color:whitesmoke;
+        }
+        #slide,#slide1{
+            display:none;
+            position:absolute;
+            background-color:black;
+            width:400px;
+            height:100%;
+            left:298px;
+            top:300px;
+            border-radius:10px;
+        }
+        #slide2 {
+            display: none;
+            position: relative;
+            background-color: aqua;
+            width: 75%;
+            height: 35%;
+            padding:20px;
+            margin:75px auto;
+            border-radius:10px;
+        }
+        #message{
+            height:70%;
+            border-radius:10px;
+        }
+        button{
+            color:#0b62b6;
+        }
+        #enter{
+            margin:5px auto;
+            padding:3px;
+            font-weight:bold;
+            width:200px;
+            align-content:center;
+        }
+        button{
+            color:maroon;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <h2 style="text-align:center;">Login Form</h2>
+                <div class="form-group">
+                    <label class="control-label">User Name:</label>
+                    <input type="text" id="username" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Password:</label>
+                    <input type="password" id="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button id="acync">Show User ID & Passward</button>&nbsp;
+                    <button id="login">Login</button><br />
+                    <button id="enter">Enter Website</button>
+                </div>
+            </div>
+            <div id="slide">
+
+            </div>
+            <div id="slide1">
+                <div id="slide2">
+                    <div>
+                        <p>User Name: akmrafiq<br />Password: 12345</p>
+                    </div>
+                    <div id="message">
+                    </div>
+                    <button id="ok">OK</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#acync').click(function () {
+                $('#slide').fadeTo(3000, .3).promise()
+                .then(function () {                    
+                    $('#slide1').show();
+                    $('#slide2').slideDown(1000);
+                    $('#message').html('Login Time:' + getTimeNow());
+                })
+            })
+            $('#ok').click(function () {
+                $('#slide2').slideUp(1000).promise()
+                .then(function () {
+                    $('#slide1').hide();                  
+                    $('#slide').fadeOut(3000)
+                })
+            })
+            $("#enter").hide();
+        })
+        function getTimeNow() {
+            var date = new Date();
+            return date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+        }
+        $("#login").click(function () {
+            if ($("#username").val() == "akmrafiq" && $("#password").val() == (parseInt(12345))) {
+                $("#enter").show(window.location.href = 'Home.html');
+                $('#username').val('');
+                $('#passward').val('');
+                $('#username').focus();
+            }
+            else {
+                   alert('Incorrect UserName or Passward')
+                    $('#username').val('');
+                    $('#password').val('');
+                    $('#username').focus();
+            }
+        }) 
+    </script>
+</body>
+</html>

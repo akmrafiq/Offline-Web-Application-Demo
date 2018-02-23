@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <br />
+        <div class="col-md-7">
+            <table class="table table-bordered" id="tbl">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>FullName</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="row">
+            <form class="col-md-5">
+                <div class="form-group">
+                    <label class="control-label">Full Name</label>
+                    <input class="form-control" id="name" placeholder="Enter your name" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input class="form-control" id="email" placeholder="Enter email address" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Phone</label>
+                    <input class="form-control" id="phone" placeholder="Enter Phone no" />
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-success" id="add">Add New</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+   
+    <script type="text/javascript">
+        var contacts = {};
+        contacts.db = null;
+        contacts.openDb = function () {
+            contacts.db = openDatabase("contactsdb", "1.0", "MyContacts Book", 2 * 1024 * 1024);
+        }
+
+        contacts.createTable = function () {
+            contacts.db.transaction(function (tx) {
+                var sql = "CREATE TABLE IF NOT EXISTS contacts(" +
+                    "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "name TEXT," +
+                    "email TEXT," +
+                    "phone TEXT)";
+                tx.executeSql(sql);
+            })
+        }
+
+
+        contacts.addData = function (name, email, phone) {
+            contacts.db.transaction(function (tx) {
+                tx.executeSql("INSERT INTO contacts(name,phone,email) VALUES(?,?,?)", [name, email, phone]);
+            })
+        }
+
+        contacts.showContacts = function () {
+            contacts.db.transaction(function (tx) {
+                tx.executeSql("SELECT * FROM contacts", [], function (tx, resultset) {
+                    $("#tbl tbody").empty();
+                    for (var i = 0; i < resultset.rows.length; i++) {
+                        var row = resultset.rows.item(i);
+                        $("#tbl tbody").append("<tr><td>" + row.Id +
+                            "</td><td>" + row.name +
+                            "</td><td>" + row.email +
+                            "</td><td>" + row.phone + "</td></tr>");
+                    }
+                })
+
+
+            })
+        }
+
+        $(document).ready(function () {
+            contacts.openDb();
+            contacts.createTable();
+            contacts.showContacts();
+            $("#add").click(function () {
+                contacts.addData($("#name").val(), $("#email").val(), $("#phone").val());
+                contacts.showContacts();
+                $("#name").val("");
+                $("#email").val("");
+                $("#phone").val("");
+                $("#name").focus();
+            })
+
+        })
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Our Location</title>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvJoNM1NjrGcLZakq-v_10cHLUOAFPbTs&callback=initMap"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            navigator.geolocation.getCurrentPosition(getPosition, showError);
+
+            function getPosition(position) {
+                var coords = new google.maps.LatLng(23.756040, 90.375168);
+
+                var div = document.getElementById("d1");
+                var option = {
+                    zoom: 15,
+                    center: coords,
+                    mapTypeControl: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    navigationControlOption: {
+                        style: google.maps.NavigationControlStyle.SMALL
+                    }
+                };
+                var map = new google.maps.Map(div, option);
+                var marker = new google.maps.Marker({
+                    position: coords,
+                    map: map,
+                    title: "Air Ticket Bazar!!!"
+                });
+            }
+            function showError(error) {
+                alert(error.message);
+            }
+        })
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Air Ticket Bazar in Maps</h1>
+        <div id="d1" style="width:600px; height:600px; border:dotted maroon"></div>
+      
+    </center>
+    <style type="text/css">
+        h1{
+            font-family:fantasy;
+            color:maroon;
+        }
+
+    </style>
+</body>
+</html>

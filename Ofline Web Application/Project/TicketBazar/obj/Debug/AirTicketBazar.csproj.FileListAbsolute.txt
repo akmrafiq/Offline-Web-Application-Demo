@@ -1,0 +1,17 @@
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll.config
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.pdb
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.dll
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.pdb
+C:\Users\AKM RAFIQUL ALAM\Desktop\HTML Project\Project\TicketBazar\obj\Debug\AirTicketBazar.csprojResolveAssemblyReference.cache
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll.config
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.dll
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\bin\TicketBazar.pdb
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\obj\Debug\AirTicketBazar.csprojResolveAssemblyReference.cache
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.dll
+C:\Users\Lab1_5\Desktop\HTML Project\Project\TicketBazar\obj\Debug\TicketBazar.pdb
+D:\C#.NET\Projects\ProjectHTML\Ofline Web Application\Project\TicketBazar\bin\TicketBazar.dll.config
+D:\C#.NET\Projects\ProjectHTML\Ofline Web Application\Project\TicketBazar\bin\TicketBazar.dll
+D:\C#.NET\Projects\ProjectHTML\Ofline Web Application\Project\TicketBazar\bin\TicketBazar.pdb
+D:\C#.NET\Projects\ProjectHTML\Ofline Web Application\Project\TicketBazar\obj\Debug\TicketBazar.dll
+D:\C#.NET\Projects\ProjectHTML\Ofline Web Application\Project\TicketBazar\obj\Debug\TicketBazar.pdb

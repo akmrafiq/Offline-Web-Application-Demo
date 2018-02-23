@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        body {
+            margin: auto;
+            width: auto;
+        }
+
+        #main {
+            background-color: maroon;
+            color: whitesmoke;
+            font-size: 20px;
+            font-family: Cambria;
+        }
+
+        h1 {
+            font-family: 'Buxton Sketch';
+            color: maroon;
+            padding-left: 30px;
+            font-size: 100px;
+            text-align: left;
+        }
+
+        h2 {
+            color: whitesmoke;
+            font-family: Cambria;
+        }
+
+        li {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px auto;
+            padding: 10px;
+            float: left;
+        }
+
+        #video {
+            width: 700px;
+            float: left;
+            margin: 10px auto;
+            padding: 5px 5px 5px 5px;
+        }
+        #why{
+            width:250px;
+            float:left;
+        }
+
+
+        #puzzle {
+            float: left;
+            width: 30%;
+            margin: 10px auto;
+            padding: 5px 5px 5px 5px;
+        }
+        #middle{
+            margin-bottom:10px;
+        }
+
+        #image {
+            width: 67%;
+            float: right;
+            padding: 5px 5px 5px 10px;
+            margin-left: 20px;
+        }
+
+            #image img {
+                width: 350px;
+                height: 185px;
+            }
+
+        button {
+            color: maroon;
+        }
+        h3 {
+            color: whitesmoke;
+        }
+
+        #deBy {
+            margin-top: 10px;
+            font-weight:bold;
+            font-family:'Buxton Sketch';
+            color: maroon;
+            font-size:25px;
+        }
+
+        #puzzleBoard {
+            border:2px solid white;
+            width: 305px;
+            height: 260px;
+            margin: 10px auto;
+        }
+
+        .hole {
+            background-color: whitesmoke;
+            border: solid maroon;
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+
+        .item {
+            font-size: 45px;
+            width: 48px;
+            height: 48px;
+            color: maroon;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Buxton Sketch';
+        }
+
+        #pHead, #pMsg {
+            color: whitesmoke;
+            text-align:center;
+        }
+        #indexDB{
+             margin:10px auto; 
+             padding:10px 10px 10px 10px;
+             color:black; 
+        }
+        footer{
+            height:60px;
+            background-color:maroon;
+            color:whitesmoke;
+            font-size:20px;
+            padding:10px 10px 10px 10px;
+            border:1px solid white;
+        }
+        #socialmedia img{
+            float:left;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            margin-left:3px;
+        }
+        #pay {
+            margin-left:20px;
+            width:100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="Images/Logo.png" style="height:150px; width:auto; border-radius:50%" />
+                </div>
+                <div class="col-md-8">
+                    <h1>Air Ticket Bazar</h1>
+                </div>
+                <div class="col-md-2">
+                    <p id="deBy">
+                        Developed by:<br />
+                        A.K.M. Rafiqul Alam<br />
+                        
+                    </p>
+                    <h3 style="color:purple">Call:16111</h3>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="WebSQL.html">Web SQL</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact us<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="GeoLocation.html">Geo Location</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="middle">
+            <div id="puzzle">
+                <div id="puzzleBoard">
+                    <h4 id="pMsg">Solved the puzzle &amp; get 20% discount on ticket booking!!!!</h4>
+                    <h3 id="pHead">Air Ticket Bazar</h3>
+                    <div class="hole">
+                        <div class="item" draggable="true">A</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">a</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">a</div>
+                    </div>
+                    <div class="hole">
+
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">B</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">c</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">e</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">i</div>
+                    </div>
+                    <div class="hole">
+
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">i</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">k</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">T</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">t</div>
+                    </div>
+                    <div class="hole">
+
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">r</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">r</div>
+                    </div>
+                    <div class="hole">
+                        <div class="item" draggable="true">z</div>
+                    </div>
+                    <div class="hole">
+
+                    </div>
+                </div>
+            </div>
+            <div id="image">
+                <h2 style="color:whitesmoke; font-family:'Buxton Sketch';">Our Packages</h2>
+                <br />
+                <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+                    <img src="Images/chittagong.jpg" />
+                    <img src="Images/coxsbazar.jpg" />
+                    <img src="Images/jessore.jpg" />
+                    <img src="Images/saidpur.jpg" />
+                    <img src="Images/sylhet.jpg" />
+                    <img src="Images/kolkata.jpg" />
+                </marquee>
+            </div>
+        </div>
+        <div class="row" id="indexDB">
+            <br />
+            <h2>Indexed DB</h2>
+            <div class="col-md-8">
+                <h2>Ticket booking confirmed!!!</h2>
+                <table class="table table-bordered table-hover" id="tbl">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>From</td>
+                            <td>To</td>
+                            <td>Phone</td>
+                            <td>Update</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <h2>For booking, Please fill the required fields</h2>
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input type="text" id="name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">From</label>
+                    <select id="from" class="form-control">
+                        <option>Departure City</option>
+                        <option>Dhaka</option>
+                        <option>Cox's Bazar</option>
+                        <option>Chittagong</option>
+                        <option>Jessore</option>
+                        <option>Saidpur</option>
+                        <option>Sylhet</option>
+                        <option>Kolkata</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">To</label>
+                    <select id="to" class="form-control">
+                        <option>Destination City</option>
+                        <option>Dhaka</option>
+                        <option>Cox's Bazar</option>
+                        <option>Chittagong</option>
+                        <option>Jessore</option>
+                        <option>Saidpur</option>
+                        <option>Sylhet</option>
+                        <option>Kolkata</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Phone</label>
+                    <input type="text" id="phone" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="button" id="add" value="Confirm" style="color:maroon" />
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div id="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="Videos/SafetyVideo.mp4" type="video/mp4" />
+                        <track src="my.vtt" srclang="en" kind="subtitles" label="English subtitle" default />
+                    </video>
+                </div>
+                <div id="why">
+                    <h2>Why buy tickets from us?</h2>
+                        <p>
+                            &bull; Airlines tickets anytime from anywhere.<br />
+                            &bull; by credit card, mobile banking or cash.<br />
+                            &bull; Get tickets delivered to your doorstep<br />
+                            &bull; Dependable customer service (8 AM to 11 PM)
+                        </p>
+                    </div>            
+            </div>
+
+        <div class="row">
+            <div class="col-md-12" id="pay">
+                <img src="Images/SSL-Commerz-Pay-With.png" />
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+            <div id="socialmedia">
+                <p style="font-family:Cambria; font-size:20px; float:left">Like &amp; follow us on/</p>
+                <a href="https://www.facebook.com"><img src="Images/facebook.png" /></a>
+                <a href="https://www.twitter.com"><img src="Images/twitter.png" /></a>
+                <a href="https://www.instagram.com"><img src="Images/Instagram.png" /></a>
+                <a href="https://plus.google.com"><img src="Images/google-plus.png" /></a>
+            </div>
+            <p style="text-align:right">&copy;AirTicketBazar-2017 | AllRightsReserved</p>
+    </footer>
+    <script type="text/javascript">
+        //Index DB
+        var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+        var db;
+        var currentEdit = null;
+        $(document).ready(function () {
+            var openReq = indexedDB.open('Details', 1)
+            openReq.onupgradeneeded = function (e) {
+                db = e.target.result;
+                var store = db.createObjectStore('Details', { keyPath: 'id', autoIncrement: true });
+                console.log(store);
+            }
+            openReq.onsuccess = function (e) {
+                db = e.target.result;
+                console.log(db);
+            }
+            $('#add').click(function () {
+                if ($('#name').val() != '' && $('#from').val() != '' && $('#to').val() != '' && $('#phone').val() != '') {
+                    var tx = db.transaction(['Details'], 'readwrite')
+                    if (currentEdit == null) {
+                        var store = tx.objectStore('Details');
+                        var req = store.add({
+                            Name: $('#name').val(),
+                            From: $('#from').val(),
+                            To: $('#to').val(),
+                            Phone: $('#phone').val()
+                        })
+                        req.onsuccess = function () {
+                            console.log('Added data');
+                            readAll();
+                        }
+                        $('#name').val(''),
+                        $('#from').val(''),
+                        $('#to').val(''),
+                        $('#phone').val(''),
+                        $('#name').focus()
+                    }
+                    else {
+                        var store = tx.objectStore('Details');
+                        var req = store.put({
+                            Name: $('#name').val(),
+                            From: $('#from').val(),
+                            To: $('#to').val(),
+                            Phone: $('#phone').val(),
+                            id: currentEdit.id
+                        })
+                        req.onsuccess = function () {
+                            console.log('Updated data');
+                            readAll()
+                        }
+                        $('#name').val(''),
+                        $('#from').val(''),
+                        $('#to').val(''),
+                        $('#phone').val(''),
+                        $('#name').focus()
+                    }
+                    $('#add').val('Confirm');
+                    currentEdit = null;
+                }
+                else {
+                    alert('Fill the required field');
+                }
+
+            })
+        })
+        function readAll() {
+            $('#tbl tbody').empty();
+            var tx = db.transaction(['Details'], 'readonly');
+            var req = tx.objectStore('Details').openCursor();
+            req.onsuccess = function (e) {
+                var cursor = e.target.result;
+                if (!cursor) return;
+                $('#tbl tbody').append(
+                    '<tr>' +
+                    '<td>' + cursor.value.Name + '</td>' +
+                    '<td>' + cursor.value.From + '</td>' +
+                    '<td>' + cursor.value.To + '</td>' +
+                    '<td>' + cursor.value.Phone + '</td>' +
+                    '<td>' + '<button class="edit" data-key="' + cursor.key + '">Edit</button>|<button class="del" data-key="' + cursor.key + '">Delete</button></td>' +
+                    '</tr>'
+                )
+                cursor.continue();
+            }
+            req.onerror = function (err) {
+                console.log(err);
+            }
+            tx.oncomplete = function () {
+                $('.del').click(function () {
+                    var id = $(this).attr('data-key');
+                    var row = $(this).parent().parent();
+                    var tx = db.transaction(['Details'], 'readwrite');
+                    var store = tx.objectStore('Details');
+                    var req = store.delete(parseInt(id))
+
+
+                    req.onsuccess = function () {
+                        console.log('Data deleted successfully!!!!')
+                        row.remove();
+                    }
+                })
+                $('.edit').click(function (ev) {
+                    ev.preventDefault();
+                    fillForm($(this).attr('data-key'))
+                })
+            }
+        }
+        function fillForm(id) {
+            var t = db.transaction(['Details'], 'readwrite');
+            var objstore = t.objectStore('Details');
+            var request = objstore.get(parseInt(id))
+            request.onsuccess = function (ev) {
+                currentEdit = request.result;
+                console.log(currentEdit);
+
+                $('#name').val(currentEdit.Name)
+                $('#from').val(currentEdit.From)
+                $('#to').val(currentEdit.To)
+                $('#phone').val(currentEdit.Phone)
+                $('#add').val('Update');
+            }
+        }
+        //Drag and drop
+        var $di;
+        $(document).ready(function () {
+            $(".item").on('dragstart', dragging);
+            $(".item").on('dragend', draggingend);
+
+            $(".hole").on('dragenter', preventDefault);
+            $(".hole").on('dragover', preventDefault);
+            $(".hole").on('drop', dropitem);
+        })
+
+        function draggingend(e) {
+            $(e.target).removeClass('dragging');
+        }
+        function preventDefault(e) {
+            e.preventDefault();
+        }
+
+        function dropitem(e) {
+            var hole = $(e.target);
+            if (hole.hasClass('hole') && hole.children().length == 0) {
+                $di.detach();
+                $di.appendTo($(e.target));
+            }
+        }
+        function dragging(e) {
+            $(e.target).addClass('dragging');
+            $di = $(e.target);
+        }
+    </script>
+</body>
+</html>
